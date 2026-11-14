@@ -28,7 +28,7 @@ type ThemeStore = {
 export const useThemeStore = create<ThemeStore>()(
   persist(
     (set, get) => ({
-      theme: 'dark',
+      theme: 'light',
       palette: 'midnight',
       language: 'en',
       setTheme: (mode: ThemeMode) => {
@@ -50,7 +50,9 @@ export const useThemeStore = create<ThemeStore>()(
       name: 'hx-theme',
       onRehydrateStorage: () => (state) => {
         if (state) {
-          applyThemeToDOM(state.theme, state.palette || 'midnight')
+          applyThemeToDOM(state.theme || 'light', state.palette || 'midnight')
+        } else {
+          applyThemeToDOM('light', 'midnight')
         }
       },
     }

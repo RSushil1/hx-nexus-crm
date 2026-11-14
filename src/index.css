@@ -5,8 +5,26 @@
 @tailwind utilities;
 
 @layer base {
-  /* Default: Midnight Navy Theme */
+  /* Default: Executive Light Mode */
   :root,
+  .light,
+  [data-theme="light"] {
+    --bg-app:              248, 250, 252;     /* #F8FAFC (Slate-50) */
+    --bg-card:             255, 255, 255;     /* #FFFFFF */
+    --bg-card-hover:       241, 245, 249;     /* #F1F5F9 (Slate-100) */
+    --border-card:         226, 232, 240;     /* #E2E8F0 (Slate-200) */
+    --border-card-subtle:  203, 213, 225;     /* #CBD5E1 (Slate-300) */
+    --accent:              217, 119, 6;       /* #D97706 (Amber-600) */
+    --accent-dark:         180, 83, 9;        /* #B45309 (Amber-700) */
+    --accent-btn:          255, 255, 255;     /* #FFFFFF */
+    --text-primary:        15, 23, 42;        /* #0F172A (Slate-900) */
+    --text-secondary:      51, 65, 85;        /* #334155 (Slate-700) */
+    --text-muted:          100, 116, 139;     /* #64748B (Slate-500) */
+    --card-shadow:         0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    --card-shadow-hover:   0 4px 12px -2px rgba(0, 0, 0, 0.12), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Optional Dark Mode Themes */
   [data-theme="midnight"] {
     --bg-app:              11, 15, 23;        /* #0B0F17 */
     --bg-card:             17, 24, 39;        /* #111827 */
@@ -53,23 +71,6 @@
     --text-muted:          110, 231, 183;     /* #6EE7B7 */
     --card-shadow:         0 1px 3px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
     --card-shadow-hover:   0 4px 16px -2px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
-  }
-
-  .light,
-  [data-theme="light"] {
-    --bg-app:              248, 250, 252;     /* #F8FAFC (Slate-50) */
-    --bg-card:             255, 255, 255;     /* #FFFFFF */
-    --bg-card-hover:       241, 245, 249;     /* #F1F5F9 (Slate-100) */
-    --border-card:         226, 232, 240;     /* #E2E8F0 (Slate-200) */
-    --border-card-subtle:  203, 213, 225;     /* #CBD5E1 (Slate-300) */
-    --accent:              217, 119, 6;       /* #D97706 (Amber-600) */
-    --accent-dark:         180, 83, 9;        /* #B45309 (Amber-700) */
-    --accent-btn:          255, 255, 255;     /* #FFFFFF */
-    --text-primary:        15, 23, 42;        /* #0F172A (Slate-900) */
-    --text-secondary:      51, 65, 85;        /* #334155 (Slate-700) */
-    --text-muted:          100, 116, 139;     /* #64748B (Slate-500) */
-    --card-shadow:         0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-    --card-shadow-hover:   0 4px 12px -2px rgba(0, 0, 0, 0.12), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
   }
 
   * {

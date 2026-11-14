@@ -12,22 +12,22 @@
           if (stored) {
             var parsed = JSON.parse(stored);
             var state = parsed.state || {};
-            var isLight = state.theme === 'light';
+            var isDark = state.theme === 'dark';
             var palette = state.palette || 'midnight';
-            if (isLight) {
-              document.documentElement.classList.add('light');
-              document.documentElement.setAttribute('data-theme', 'light');
-            } else {
+            if (isDark) {
               document.documentElement.classList.add('dark');
               document.documentElement.setAttribute('data-theme', palette);
+            } else {
+              document.documentElement.classList.add('light');
+              document.documentElement.setAttribute('data-theme', 'light');
             }
           } else {
-            document.documentElement.classList.add('dark');
-            document.documentElement.setAttribute('data-theme', 'midnight');
+            document.documentElement.classList.add('light');
+            document.documentElement.setAttribute('data-theme', 'light');
           }
         } catch (e) {
-          document.documentElement.classList.add('dark');
-          document.documentElement.setAttribute('data-theme', 'midnight');
+          document.documentElement.classList.add('light');
+          document.documentElement.setAttribute('data-theme', 'light');
         }
       })();
     </script>
