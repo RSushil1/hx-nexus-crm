@@ -1,0 +1,35 @@
+export const user = {
+  id: 'usr-dana-001',
+  firstName: 'Dana',
+  lastName: 'Reyes',
+  fullName: 'Dana Reyes',
+  email: 'dana.reyes@hxnexus.com',
+  maskedEmail: 'da***@hxnexus.com',
+  avatar: 'D',
+  locale: 'en-AE',
+  language: 'en',
+  mfaEnabled: true,
+  activeSessions: 2,
+  referralCode: 'DANA-NX77',
+  referralUrl: 'https://trade.hxnexus.com?ref=DANA-NX77',
+  memberSince: '2024-03-15',
+  sessions: [
+    { id: 's1', device: 'Chrome on Windows', lastActive: '2026-11-13T14:30:00Z', current: true },
+    { id: 's2', device: 'Safari on iPhone', lastActive: '2026-11-12T09:15:00Z', current: false },
+  ],
+  preferences: {
+    productUpdates: true,
+    marketingEmail: false,
+    smsAlerts: true,
+    weeklySummary: true,
+  },
+  onboarding: {
+    complete: true,
+    steps: [
+      { id: 1, title: 'Complete profile', description: 'Contact details & preferred language', completedAt: '2024-03-15T10:00:00Z' },
+      { id: 2, title: 'Identity verification', description: 'KYC documents review', completedAt: '2024-03-16T14:22:00Z' },
+      { id: 3, title: 'First deposit', description: 'Initial account funding', completedAt: '2024-03-17T09:45:00Z' },
+      { id: 4, title: 'Open trading account', description: 'Account catalog selection', completedAt: '2024-03-17T10:00:00Z' },
+    ],
+  },
+}
